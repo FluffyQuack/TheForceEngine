@@ -152,6 +152,15 @@
     <Filter Include="Source\TFE_Jedi\IMuse">
       <UniqueIdentifier>{60ca479d-31f9-44a4-9dd7-a98b9e27cee3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Network">
+      <UniqueIdentifier>{1db15367-320d-4fb0-8583-fa0a0a1d155b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Network\slikenet">
+      <UniqueIdentifier>{605f5493-e362-4bf3-af2c-a7e24f260700}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Network\slikenet\Include">
+      <UniqueIdentifier>{da6b544a-d61f-4613-997c-58ed1bc61ccf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -874,6 +883,486 @@
     <ClInclude Include="TFE_Jedi\IMuse\midiData.h">
       <Filter>Source\TFE_Jedi\IMuse</Filter>
     </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\_FindFirst.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\alloca.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\assert.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\AutopatcherPatchContext.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\AutopatcherRepositoryInterface.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\Base64Encoder.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\BitStream.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\CCRakNetSlidingWindow.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\CCRakNetUDT.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\CheckSum.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\CloudClient.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\CloudCommon.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\CloudServer.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\commandparser.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\CommandParserInterface.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\ConnectionGraph2.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\ConsoleServer.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DataCompressor.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\defineoverrides.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\defines.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DirectoryDeltaTransfer.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DR_SHA1.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_BinarySearchTree.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_BPlusTree.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_BytePool.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_ByteQueue.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_Hash.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_Heap.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_HuffmanEncodingTree.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_HuffmanEncodingTreeFactory.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_HuffmanEncodingTreeNode.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_LinkedList.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_List.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_Map.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_MemoryPool.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_Multilist.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_OrderedChannelHeap.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_OrderedList.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_Queue.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_QueueLinkedList.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_RangeList.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_Table.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_ThreadsafeAllocatingQueue.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_Tree.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DS_WeightedGraph.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\DynDNS.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\EmailSender.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\EmptyHeader.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\EpochTimeToString.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\Export.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\FileList.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\FileListNodeContext.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\FileListTransfer.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\FileListTransferCBInterface.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\FileOperations.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\FormatString.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\FullyConnectedMesh2.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\Getche.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\Gets.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\GetTime.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\gettimeofday.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\GridSectorizer.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\HTTPConnection.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\HTTPConnection2.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\IncrementalReadInterface.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\InternalPacket.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\Itoa.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\Kbhit.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\linux_adapter.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\LinuxStrings.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\LocklessTypes.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\LogCommandParser.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\memoryoverride.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\MessageFilter.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\MessageIdentifiers.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\MTUSize.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\NativeFeatureIncludes.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\NativeFeatureIncludesOverrides.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\NativeTypes.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\NatPunchthroughClient.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\NatPunchthroughServer.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\NatTypeDetectionClient.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\NatTypeDetectionCommon.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\NatTypeDetectionServer.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\NetworkIDManager.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\NetworkIDObject.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\osx_adapter.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\PacketConsoleLogger.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\PacketFileLogger.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\PacketizedTCP.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\PacketLogger.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\PacketOutputWindowLogger.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\PacketPool.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\PacketPriority.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\peer.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\peerinterface.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\PluginInterface2.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\PS3Includes.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\PS4Includes.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\Rackspace.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\Rand.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\RandSync.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\ReadyEvent.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\RefCountedObj.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\RelayPlugin.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\ReliabilityLayer.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\ReplicaEnums.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\ReplicaManager3.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\Router2.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\RPC4Plugin.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\SecureHandshake.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\SendToThread.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\SignaledEvent.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\SimpleMutex.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\SimpleTCPServer.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\SingleProducerConsumer.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\sleep.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\smartptr.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\socket.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\socket2.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\SocketDefines.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\SocketIncludes.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\SocketLayer.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\statistics.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\StatisticsHistory.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\string.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\StringCompressor.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\StringTable.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\SuperFastHash.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\TableSerializer.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\TCPInterface.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\TeamBalancer.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\TeamManager.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\TelnetTransport.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\thread.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\ThreadPool.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\ThreadsafePacketLogger.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\time.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\transport2.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\TransportInterface.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\TwoWayAuthentication.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\types.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\UDPForwarder.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\UDPProxyClient.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\UDPProxyCommon.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\UDPProxyCoordinator.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\UDPProxyServer.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\VariableDeltaSerializer.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\VariableListDeltaTracker.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\VariadicSQLParser.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\version.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\VitaIncludes.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\WindowsIncludes.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\WSAStartupSingleton.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\wstring.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\slikenet\Include\XBox360Includes.h">
+      <Filter>Source\Network\slikenet\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Network-Main.h">
+      <Filter>Source\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Network-Packets.h">
+      <Filter>Source\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Network-Player.h">
+      <Filter>Source\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Print.h">
+      <Filter>Source\Network</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -1475,6 +1964,18 @@
     </ClCompile>
     <ClCompile Include="TFE_Jedi\IMuse\midiData.cpp">
       <Filter>Source\TFE_Jedi\IMuse</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Network-Main.cpp">
+      <Filter>Source\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Network-Packets.cpp">
+      <Filter>Source\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Network-Player.cpp">
+      <Filter>Source\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Print.cpp">
+      <Filter>Source\Network</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

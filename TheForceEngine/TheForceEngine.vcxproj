@@ -72,13 +72,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
@@ -181,6 +181,7 @@
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;WIN32_OPENGL;__WINDOWS_MM__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -260,6 +261,7 @@
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;WIN32_OPENGL;__WINDOWS_MM__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -325,6 +327,166 @@ echo ^)";
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Network\Network-Main.h" />
+    <ClInclude Include="Network\Network-Packets.h" />
+    <ClInclude Include="Network\Network-Player.h" />
+    <ClInclude Include="Network\Print.h" />
+    <ClInclude Include="Network\slikenet\Include\alloca.h" />
+    <ClInclude Include="Network\slikenet\Include\assert.h" />
+    <ClInclude Include="Network\slikenet\Include\AutopatcherPatchContext.h" />
+    <ClInclude Include="Network\slikenet\Include\AutopatcherRepositoryInterface.h" />
+    <ClInclude Include="Network\slikenet\Include\Base64Encoder.h" />
+    <ClInclude Include="Network\slikenet\Include\BitStream.h" />
+    <ClInclude Include="Network\slikenet\Include\CCRakNetSlidingWindow.h" />
+    <ClInclude Include="Network\slikenet\Include\CCRakNetUDT.h" />
+    <ClInclude Include="Network\slikenet\Include\CheckSum.h" />
+    <ClInclude Include="Network\slikenet\Include\CloudClient.h" />
+    <ClInclude Include="Network\slikenet\Include\CloudCommon.h" />
+    <ClInclude Include="Network\slikenet\Include\CloudServer.h" />
+    <ClInclude Include="Network\slikenet\Include\commandparser.h" />
+    <ClInclude Include="Network\slikenet\Include\CommandParserInterface.h" />
+    <ClInclude Include="Network\slikenet\Include\ConnectionGraph2.h" />
+    <ClInclude Include="Network\slikenet\Include\ConsoleServer.h" />
+    <ClInclude Include="Network\slikenet\Include\DataCompressor.h" />
+    <ClInclude Include="Network\slikenet\Include\defineoverrides.h" />
+    <ClInclude Include="Network\slikenet\Include\defines.h" />
+    <ClInclude Include="Network\slikenet\Include\DirectoryDeltaTransfer.h" />
+    <ClInclude Include="Network\slikenet\Include\DR_SHA1.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_BinarySearchTree.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_BPlusTree.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_BytePool.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_ByteQueue.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_Hash.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_Heap.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_HuffmanEncodingTree.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_HuffmanEncodingTreeFactory.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_HuffmanEncodingTreeNode.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_LinkedList.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_List.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_Map.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_MemoryPool.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_Multilist.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_OrderedChannelHeap.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_OrderedList.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_Queue.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_QueueLinkedList.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_RangeList.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_Table.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_ThreadsafeAllocatingQueue.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_Tree.h" />
+    <ClInclude Include="Network\slikenet\Include\DS_WeightedGraph.h" />
+    <ClInclude Include="Network\slikenet\Include\DynDNS.h" />
+    <ClInclude Include="Network\slikenet\Include\EmailSender.h" />
+    <ClInclude Include="Network\slikenet\Include\EmptyHeader.h" />
+    <ClInclude Include="Network\slikenet\Include\EpochTimeToString.h" />
+    <ClInclude Include="Network\slikenet\Include\Export.h" />
+    <ClInclude Include="Network\slikenet\Include\FileList.h" />
+    <ClInclude Include="Network\slikenet\Include\FileListNodeContext.h" />
+    <ClInclude Include="Network\slikenet\Include\FileListTransfer.h" />
+    <ClInclude Include="Network\slikenet\Include\FileListTransferCBInterface.h" />
+    <ClInclude Include="Network\slikenet\Include\FileOperations.h" />
+    <ClInclude Include="Network\slikenet\Include\FormatString.h" />
+    <ClInclude Include="Network\slikenet\Include\FullyConnectedMesh2.h" />
+    <ClInclude Include="Network\slikenet\Include\Getche.h" />
+    <ClInclude Include="Network\slikenet\Include\Gets.h" />
+    <ClInclude Include="Network\slikenet\Include\GetTime.h" />
+    <ClInclude Include="Network\slikenet\Include\gettimeofday.h" />
+    <ClInclude Include="Network\slikenet\Include\GridSectorizer.h" />
+    <ClInclude Include="Network\slikenet\Include\HTTPConnection.h" />
+    <ClInclude Include="Network\slikenet\Include\HTTPConnection2.h" />
+    <ClInclude Include="Network\slikenet\Include\IncrementalReadInterface.h" />
+    <ClInclude Include="Network\slikenet\Include\InternalPacket.h" />
+    <ClInclude Include="Network\slikenet\Include\Itoa.h" />
+    <ClInclude Include="Network\slikenet\Include\Kbhit.h" />
+    <ClInclude Include="Network\slikenet\Include\LinuxStrings.h" />
+    <ClInclude Include="Network\slikenet\Include\linux_adapter.h" />
+    <ClInclude Include="Network\slikenet\Include\LocklessTypes.h" />
+    <ClInclude Include="Network\slikenet\Include\LogCommandParser.h" />
+    <ClInclude Include="Network\slikenet\Include\memoryoverride.h" />
+    <ClInclude Include="Network\slikenet\Include\MessageFilter.h" />
+    <ClInclude Include="Network\slikenet\Include\MessageIdentifiers.h" />
+    <ClInclude Include="Network\slikenet\Include\MTUSize.h" />
+    <ClInclude Include="Network\slikenet\Include\NativeFeatureIncludes.h" />
+    <ClInclude Include="Network\slikenet\Include\NativeFeatureIncludesOverrides.h" />
+    <ClInclude Include="Network\slikenet\Include\NativeTypes.h" />
+    <ClInclude Include="Network\slikenet\Include\NatPunchthroughClient.h" />
+    <ClInclude Include="Network\slikenet\Include\NatPunchthroughServer.h" />
+    <ClInclude Include="Network\slikenet\Include\NatTypeDetectionClient.h" />
+    <ClInclude Include="Network\slikenet\Include\NatTypeDetectionCommon.h" />
+    <ClInclude Include="Network\slikenet\Include\NatTypeDetectionServer.h" />
+    <ClInclude Include="Network\slikenet\Include\NetworkIDManager.h" />
+    <ClInclude Include="Network\slikenet\Include\NetworkIDObject.h" />
+    <ClInclude Include="Network\slikenet\Include\osx_adapter.h" />
+    <ClInclude Include="Network\slikenet\Include\PacketConsoleLogger.h" />
+    <ClInclude Include="Network\slikenet\Include\PacketFileLogger.h" />
+    <ClInclude Include="Network\slikenet\Include\PacketizedTCP.h" />
+    <ClInclude Include="Network\slikenet\Include\PacketLogger.h" />
+    <ClInclude Include="Network\slikenet\Include\PacketOutputWindowLogger.h" />
+    <ClInclude Include="Network\slikenet\Include\PacketPool.h" />
+    <ClInclude Include="Network\slikenet\Include\PacketPriority.h" />
+    <ClInclude Include="Network\slikenet\Include\peer.h" />
+    <ClInclude Include="Network\slikenet\Include\peerinterface.h" />
+    <ClInclude Include="Network\slikenet\Include\PluginInterface2.h" />
+    <ClInclude Include="Network\slikenet\Include\PS3Includes.h" />
+    <ClInclude Include="Network\slikenet\Include\PS4Includes.h" />
+    <ClInclude Include="Network\slikenet\Include\Rackspace.h" />
+    <ClInclude Include="Network\slikenet\Include\Rand.h" />
+    <ClInclude Include="Network\slikenet\Include\RandSync.h" />
+    <ClInclude Include="Network\slikenet\Include\ReadyEvent.h" />
+    <ClInclude Include="Network\slikenet\Include\RefCountedObj.h" />
+    <ClInclude Include="Network\slikenet\Include\RelayPlugin.h" />
+    <ClInclude Include="Network\slikenet\Include\ReliabilityLayer.h" />
+    <ClInclude Include="Network\slikenet\Include\ReplicaEnums.h" />
+    <ClInclude Include="Network\slikenet\Include\ReplicaManager3.h" />
+    <ClInclude Include="Network\slikenet\Include\Router2.h" />
+    <ClInclude Include="Network\slikenet\Include\RPC4Plugin.h" />
+    <ClInclude Include="Network\slikenet\Include\SecureHandshake.h" />
+    <ClInclude Include="Network\slikenet\Include\SendToThread.h" />
+    <ClInclude Include="Network\slikenet\Include\SignaledEvent.h" />
+    <ClInclude Include="Network\slikenet\Include\SimpleMutex.h" />
+    <ClInclude Include="Network\slikenet\Include\SimpleTCPServer.h" />
+    <ClInclude Include="Network\slikenet\Include\SingleProducerConsumer.h" />
+    <ClInclude Include="Network\slikenet\Include\sleep.h" />
+    <ClInclude Include="Network\slikenet\Include\smartptr.h" />
+    <ClInclude Include="Network\slikenet\Include\socket.h" />
+    <ClInclude Include="Network\slikenet\Include\socket2.h" />
+    <ClInclude Include="Network\slikenet\Include\SocketDefines.h" />
+    <ClInclude Include="Network\slikenet\Include\SocketIncludes.h" />
+    <ClInclude Include="Network\slikenet\Include\SocketLayer.h" />
+    <ClInclude Include="Network\slikenet\Include\statistics.h" />
+    <ClInclude Include="Network\slikenet\Include\StatisticsHistory.h" />
+    <ClInclude Include="Network\slikenet\Include\string.h" />
+    <ClInclude Include="Network\slikenet\Include\StringCompressor.h" />
+    <ClInclude Include="Network\slikenet\Include\StringTable.h" />
+    <ClInclude Include="Network\slikenet\Include\SuperFastHash.h" />
+    <ClInclude Include="Network\slikenet\Include\TableSerializer.h" />
+    <ClInclude Include="Network\slikenet\Include\TCPInterface.h" />
+    <ClInclude Include="Network\slikenet\Include\TeamBalancer.h" />
+    <ClInclude Include="Network\slikenet\Include\TeamManager.h" />
+    <ClInclude Include="Network\slikenet\Include\TelnetTransport.h" />
+    <ClInclude Include="Network\slikenet\Include\thread.h" />
+    <ClInclude Include="Network\slikenet\Include\ThreadPool.h" />
+    <ClInclude Include="Network\slikenet\Include\ThreadsafePacketLogger.h" />
+    <ClInclude Include="Network\slikenet\Include\time.h" />
+    <ClInclude Include="Network\slikenet\Include\transport2.h" />
+    <ClInclude Include="Network\slikenet\Include\TransportInterface.h" />
+    <ClInclude Include="Network\slikenet\Include\TwoWayAuthentication.h" />
+    <ClInclude Include="Network\slikenet\Include\types.h" />
+    <ClInclude Include="Network\slikenet\Include\UDPForwarder.h" />
+    <ClInclude Include="Network\slikenet\Include\UDPProxyClient.h" />
+    <ClInclude Include="Network\slikenet\Include\UDPProxyCommon.h" />
+    <ClInclude Include="Network\slikenet\Include\UDPProxyCoordinator.h" />
+    <ClInclude Include="Network\slikenet\Include\UDPProxyServer.h" />
+    <ClInclude Include="Network\slikenet\Include\VariableDeltaSerializer.h" />
+    <ClInclude Include="Network\slikenet\Include\VariableListDeltaTracker.h" />
+    <ClInclude Include="Network\slikenet\Include\VariadicSQLParser.h" />
+    <ClInclude Include="Network\slikenet\Include\version.h" />
+    <ClInclude Include="Network\slikenet\Include\VitaIncludes.h" />
+    <ClInclude Include="Network\slikenet\Include\WindowsIncludes.h" />
+    <ClInclude Include="Network\slikenet\Include\WSAStartupSingleton.h" />
+    <ClInclude Include="Network\slikenet\Include\wstring.h" />
+    <ClInclude Include="Network\slikenet\Include\XBox360Includes.h" />
+    <ClInclude Include="Network\slikenet\Include\_FindFirst.h" />
     <ClInclude Include="Shaders\grid.h" />
     <ClInclude Include="TFE_Archive\archive.h" />
     <ClInclude Include="TFE_Archive\gobArchive.h" />
@@ -567,6 +729,10 @@ echo ^)";
     <ClInclude Include="version.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Network\Network-Main.cpp" />
+    <ClCompile Include="Network\Network-Packets.cpp" />
+    <ClCompile Include="Network\Network-Player.cpp" />
+    <ClCompile Include="Network\Print.cpp" />
     <ClCompile Include="TFE_Archive\archive.cpp" />
     <ClCompile Include="TFE_Archive\gobArchive.cpp" />
     <ClCompile Include="TFE_Archive\gobMemoryArchive.cpp" />

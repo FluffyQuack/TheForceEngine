@@ -25,6 +25,10 @@
 #include <sys/types.h>
 #include <sys/timeb.h>
 
+//Fluffy (Multiplayer)
+#include "Network/slikenet/Include/peerInterface.h"
+#include "Network/Network-Main.h" 
+
 // Replace with music system
 #include <TFE_Audio/midiPlayer.h>
 
@@ -107,6 +111,16 @@ void handleEvent(SDL_Event& Event)
 			if (Event.key.keysym.scancode && Event.key.repeat == 0)
 			{
 				TFE_Input::setKeyDown(KeyboardCode(Event.key.keysym.scancode));
+
+				//Fluffy (Multiplayer)
+				const KeyboardCode code = KeyboardCode(Event.key.keysym.scancode);
+				if (code == KeyboardCode::KEY_M)
+				{
+					if(network_status == NETWORKSTATUS_OFF)
+						Network_Start(TFE_Input::keyDown(KEY_LSHIFT));
+					else
+						Network_Stop();
+				}
 			}
 
 			if (Event.key.keysym.scancode)
@@ -429,6 +443,9 @@ void generateScreenshotTime()
 
 int main(int argc, char* argv[])
 {
+	//Fluffy (Multiplayer)
+	Network_Initialize();
+
 	// Paths
 	bool pathsSet = true;
 	pathsSet &= TFE_Paths::setProgramPath();
@@ -725,6 +742,10 @@ int main(int argc, char* argv[])
 		
 	TFE_System::logWrite(LOG_MSG, "Progam Flow", "The Force Engine Game Loop Ended.");
 	TFE_System::logClose();
+
+	//Fluffy (Multiplayer)
+	Network_Deinitialize();
+
 	return PROGRAM_SUCCESS;
 }
 
