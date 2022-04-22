@@ -24,6 +24,7 @@
 #include "infTypesInternal.h"
 // Include update functions
 #include "infElevatorUpdateFunc.h"
+#include <TFE_DarkForces/random.h> //Fluffy (DukeVoice)
 
 using namespace TFE_Jedi;
 using namespace TFE_DarkForces;
@@ -48,7 +49,7 @@ namespace TFE_Jedi
 	static SoundSourceID s_doorSound = NULL_SOUND;
 	static SoundSourceID s_needKeySoundId = NULL_SOUND;
 	static SoundSourceID s_switchDefaultSndId = NULL_SOUND;
-	
+
 	// INF delta time in ticks.
 	static s32 s_triggerCount = 0;
 	static Allocator* s_infElevators = nullptr;
@@ -1555,7 +1556,11 @@ namespace TFE_Jedi
 									SoundSourceID pageId = taskCtx->nextStop->pageId;
 									if (pageId)
 									{
-										playSound2D(pageId);
+										//Fluffy (DukeVoice)
+										StopDukeVoice();
+										SoundEffectID sndId = playSound2D(pageId);
+										if(sndId != NULL_SOUND)
+											curScriptedSoundID = sndId;
 									}
 
 									// Advance to the next stop.
@@ -2623,6 +2628,9 @@ namespace TFE_Jedi
 				// "You need the red key."
 				hud_sendTextMessage(6);
 				playSound2D(s_needKeySoundId);
+				
+				//Fluffy (DukeVoice)
+				playSoundDukeVoiceClip(s_duke_lockedDoor[random(DUKE_LOCKEDDOOR_COUNT)], 1, 1);
 				return;
 			}
 			else if (key == KEY_YELLOW && !s_playerInfo.itemYellowKey)
@@ -2630,6 +2638,9 @@ namespace TFE_Jedi
 				// "You need the yellow key."
 				hud_sendTextMessage(7);
 				playSound2D(s_needKeySoundId);
+
+				//Fluffy (DukeVoice)
+				playSoundDukeVoiceClip(s_duke_lockedDoor[random(DUKE_LOCKEDDOOR_COUNT)], 1, 1);
 				return;
 			}
 			else if (key == KEY_BLUE && !s_playerInfo.itemBlueKey)
@@ -2637,6 +2648,9 @@ namespace TFE_Jedi
 				// "You need the blue key."
 				hud_sendTextMessage(8);
 				playSound2D(s_needKeySoundId);
+
+				//Fluffy (DukeVoice)
+				playSoundDukeVoiceClip(s_duke_lockedDoor[random(DUKE_LOCKEDDOOR_COUNT)], 1, 1);
 				return;
 			}
 		}

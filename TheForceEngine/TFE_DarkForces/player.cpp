@@ -24,6 +24,7 @@
 #include <TFE_Jedi/Renderer/jediRenderer.h>
 #include <TFE_Jedi/Renderer/RClassic_Fixed/rclassicFixed.h>
 #include <TFE_Audio/audioSystem.h>
+#include <TFE_DarkForces/random.h> //Fluffy (DukeVoice)
 
 using namespace TFE_Input;
 
@@ -223,6 +224,17 @@ namespace TFE_DarkForces
 	SoundSourceID s_kyleScreamSoundSource;
 	SoundSourceID s_playerShieldHitSoundSource;
 
+	//Fluffy (DukeVoice)
+	SoundSourceID s_duke_kill[DUKE_KILL_COUNT];
+	SoundSourceID s_duke_see[DUKE_SEE_COUNT];
+	SoundSourceID s_duke_hurt[DUKE_HURT_COUNT];
+	SoundSourceID s_duke_itemPickup[DUKE_ITEMPICKUP_COUNT];
+	SoundSourceID s_duke_newGun[DUKE_NEWGUN_COUNT];
+	SoundSourceID s_duke_lockedDoor[DUKE_LOCKEDDOOR_COUNT];
+	SoundSourceID s_duke_respawn[DUKE_RESPAWN_COUNT];
+	SoundSourceID s_duke_die[DUKE_DIE_COUNT];
+	SoundSourceID s_duke_noAmmo[DUKE_NOAMMO_COUNT];
+
 	fixed16_16 s_playerHeight;
 	// Speed Modifiers
 	s32 s_playerRun = 0;
@@ -272,6 +284,62 @@ namespace TFE_DarkForces
 		s_playerInfo.health      = pickup_addToValue(0, 100, 100);
 		s_playerInfo.healthFract = 0;
 		s_energy = FIXED(2);
+
+		//Fluffy (DukeVoice)
+		char filename[20];
+		for(int i = 0; i < DUKE_KILL_COUNT; i++)
+		{
+			if(i < 100)
+			{
+				sprintf(filename, "dnkill%02u.voc", i + 1);
+				s_duke_kill[i] = sound_Load(filename);
+			}
+			else
+			{
+				sprintf(filename, "dnkil%03u.voc", i + 1);
+				s_duke_kill[i] = sound_Load(filename);
+			}
+		}
+		for(int i = 0; i < DUKE_SEE_COUNT; i++)
+		{
+			sprintf(filename, "dnsee%02u.voc", i + 1);
+			s_duke_see[i] = sound_Load(filename);
+		}
+		for(int i = 0; i < DUKE_HURT_COUNT; i++)
+		{
+			sprintf(filename, "dnhurt%02u.voc", i + 1);
+			s_duke_hurt[i] = sound_Load(filename);
+		}
+		for(int i = 0; i < DUKE_ITEMPICKUP_COUNT; i++)
+		{
+			sprintf(filename, "dnitem%02u.voc", i + 1);
+			s_duke_itemPickup[i] = sound_Load(filename);
+		}
+		for(int i = 0; i < DUKE_NEWGUN_COUNT; i++)
+		{
+			sprintf(filename, "dngun%02u.voc", i + 1);
+			s_duke_newGun[i] = sound_Load(filename);
+		}
+		for(int i = 0; i < DUKE_LOCKEDDOOR_COUNT; i++)
+		{
+			sprintf(filename, "dnlock%02u.voc", i + 1);
+			s_duke_lockedDoor[i] = sound_Load(filename);
+		}
+		for(int i = 0; i < DUKE_RESPAWN_COUNT; i++)
+		{
+			sprintf(filename, "dnspwn%02u.voc", i + 1);
+			s_duke_respawn[i] = sound_Load(filename);
+		}
+		for(int i = 0; i < DUKE_DIE_COUNT; i++)
+		{
+			sprintf(filename, "dndie%02u.voc", i + 1);
+			s_duke_die[i] = sound_Load(filename);
+		}
+		for(int i = 0; i < DUKE_NOAMMO_COUNT; i++)
+		{
+			sprintf(filename, "dnammo%02u.voc", i + 1);
+			s_duke_noAmmo[i] = sound_Load(filename);
+		}
 	}
 
 	void player_readInfo(u8* inv, s32* ammo)
@@ -1049,6 +1117,9 @@ namespace TFE_DarkForces
 				s_invincibilityTask = nullptr;
 				s_invincibility = 0;
 				player_clearSuperCharge();
+
+				//Fluffy (DukeVoice)
+				playSoundDukeVoiceClip(s_duke_respawn[random(DUKE_RESPAWN_COUNT)], 1, 0);
 			}
 			else
 			{
@@ -2055,6 +2126,9 @@ namespace TFE_DarkForces
 				s_gasSectorTask = nullptr;
 				s_playerDying = 0xffffffff;
 				s_reviveTick = s_curTick + 436;
+
+				//Fluffy (DukeVoice)
+				playSoundDukeVoiceClip(s_duke_die[random(DUKE_DIE_COUNT)], 1, 0);
 			}
 			else
 			{
@@ -2068,6 +2142,9 @@ namespace TFE_DarkForces
 				s32 healthFrac = fract16(health);
 				s_playerInfo.health = healthInt;
 				s_playerInfo.healthFract = healthFrac;
+
+				//Fluffy (DukeVoice)
+				playSoundDukeVoiceClip(s_duke_hurt[random(DUKE_HURT_COUNT)], 0, 0);
 			}
 			s_healthDamageFx += TFE_Jedi::abs(healthDmg) >> 1;
 			s_healthDamageFx = max(ONE_16, min(FIXED(17), s_healthDamageFx));

@@ -24,7 +24,7 @@ struct Actor;
 struct ActorHeader;
 
 namespace TFE_DarkForces
-{
+{	
 	///////////////////////////////////////////
 	// Internal State
 	///////////////////////////////////////////
@@ -688,6 +688,9 @@ namespace TFE_DarkForces
 					{
 						actor_setupAnimation(3, anim);
 					}
+
+					//Fluffy (DukeVoice)
+					playSoundDukeVoiceClip(s_duke_kill[random(DUKE_KILL_COUNT)], 0, 1);
 				}
 				else
 				{
@@ -745,6 +748,9 @@ namespace TFE_DarkForces
 					{
 						actor_setupAnimation(3, anim);
 					}
+
+					//Fluffy (DukeVoice)
+					playSoundDukeVoiceClip(s_duke_kill[random(DUKE_KILL_COUNT)], 0, 1);
 				}
 				else
 				{
@@ -1880,6 +1886,10 @@ namespace TFE_DarkForces
 					s_actorState.nextAlertTick = s_curTick + 291;	// ~2 seconds between alerts
 				}
 				actorLogic->flags &= 0xfffffffe;
+
+				//Fluffy (DukeVoice)
+				if(random(10) < 3)
+					playSoundDukeVoiceClip(s_duke_see[random(DUKE_SEE_COUNT)], 0, 0);
 			}
 		}
 		else if (msg == MSG_DAMAGE || msg == MSG_EXPLOSION)

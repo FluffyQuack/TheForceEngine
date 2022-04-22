@@ -127,8 +127,11 @@ namespace TFE_DarkForces
 			4,						// frameCount
 			{nullptr},				// frames[]
 			0,						// frame
-			{172, 55, 59, 56},		// xPos[]
-			{141, 167, 114, 141},	// yPos[]
+
+			//Fluffy (DukeVoice): Adjusted coordinates for Duke's mighty foot
+			{172, 10, 90, 10},		// xPos[]
+			{141, 142, 74, 142},	// yPos[]
+
 			7,						// flags
 			0,						// rollOffset
 			0,						// pchOffset

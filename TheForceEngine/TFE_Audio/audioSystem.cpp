@@ -7,6 +7,7 @@
 #include <TFE_Settings/settings.h>
 #include <TFE_FrontEndUI/console.h>
 #include <TFE_System/profiler.h>
+#include <TFE_DarkForces/time.h> //Fluffy (DukeVoice)
 #include <assert.h>
 #include <algorithm>
 
@@ -52,6 +53,9 @@ struct SoundSource
 	SoundFinishedCallback finishedCallback = nullptr;
 	void* finishedUserData = nullptr;
 	s32 finishedArg = 0;
+
+	//Fluffy (DukeVoice)
+	fixed16_16 playbackDelay;
 };
 
 namespace TFE_Audio
@@ -168,6 +172,18 @@ namespace TFE_Audio
 		SoundSource* snd = s_sources;
 		for (u32 s = 0; s < s_sourceCount; s++, snd++)
 		{
+			//Fluffy (DukeVoice)
+			if(snd->playbackDelay > 0.0f)
+			{
+				snd->playbackDelay -= TFE_DarkForces::s_deltaTime;
+				if(snd->playbackDelay <= 0.0f)
+				{
+					snd->playbackDelay = 0.0f;
+					playSource(snd);
+					continue;
+				}
+			}
+
 			if (!(snd->flags & SND_FLAG_ACTIVE)) { continue; }
 
 			if (snd->type == SOUND_2D)
@@ -266,7 +282,7 @@ namespace TFE_Audio
 	}
 
 	// Sound source that the client holds onto.
-	SoundSource* createSoundSource(SoundType type, f32 volume, f32 stereoSeperation, const SoundBuffer* buffer, const Vec3f* pos, bool copyPosition, SoundFinishedCallback callback, void* userData)
+	SoundSource* createSoundSource(SoundType type, f32 volume, f32 stereoSeperation, const SoundBuffer* buffer, const Vec3f* pos, bool copyPosition, SoundFinishedCallback callback, void* userData, void *playbackDelay) //Fluffy (DukeVoice): Added playbackDelay argument
 	{
 		if (!buffer) { return nullptr; }
 		assert(volume >= 0.0f && volume <= 1.0f);
@@ -292,6 +308,12 @@ namespace TFE_Audio
 
 		if (newSource)
 		{
+			//Fluffy (DukeVoice)
+			if(playbackDelay)
+				newSource->playbackDelay = *((fixed16_16 *) playbackDelay);
+			else
+				newSource->playbackDelay = 0;
+
 			newSource->type = type;
 			newSource->flags = SND_FLAG_ACTIVE;
 			newSource->volume = type == SOUND_2D ? volume : 0.0f;
@@ -339,6 +361,12 @@ namespace TFE_Audio
 	void playSource(SoundSource* source, bool looping)
 	{
 		if (!source || (source->flags & SND_FLAG_PLAYING))
+		{
+			return;
+		}
+
+		//Fluffy (DukeVoice)
+		if(source->playbackDelay > 0.0f)
 		{
 			return;
 		}
@@ -399,7 +427,8 @@ namespace TFE_Audio
 
 	bool isSourcePlaying(SoundSource* source)
 	{
-		return (source->flags & SND_FLAG_PLAYING) != 0u;
+		//Fluffy (DukeVoice)
+		return (source->flags & SND_FLAG_PLAYING) != 0u || source->playbackDelay > 0;
 	}
 
 	f32 getSourceVolume(SoundSource* source)

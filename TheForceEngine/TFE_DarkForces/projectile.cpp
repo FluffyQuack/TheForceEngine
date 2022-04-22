@@ -180,7 +180,10 @@ namespace TFE_DarkForces
 				projLogic->updateFunc = stdProjectileUpdateFunc;
 				projLogic->dmg = FIXED(6);
 				projLogic->falloffAmt = 0;
-				projLogic->projForce = 1310;
+
+				//Fluffy (DukeVoice): Duke's mighty foot is mighty indeed
+				projLogic->projForce = 9001;
+
 				projLogic->speed = FIXED(230);
 				projLogic->horzBounciness = 0;
 				projLogic->vertBounciness = 0;

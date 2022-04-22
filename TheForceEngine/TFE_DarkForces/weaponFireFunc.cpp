@@ -419,6 +419,9 @@ namespace TFE_DarkForces
 			// {
 				// func_1ece78();
 			// }
+
+			//Fluffy (DukeVoice)
+			playSoundDukeVoiceClip(s_duke_noAmmo[random(DUKE_NOAMMO_COUNT)], 0, 0);
 		}
 
 		task_end;
@@ -603,6 +606,9 @@ namespace TFE_DarkForces
 			// {
 				// func_1ece78();
 			// }
+
+			//Fluffy (DukeVoice)
+			playSoundDukeVoiceClip(s_duke_noAmmo[random(DUKE_NOAMMO_COUNT)], 0, 0);
 		}
 
 		task_end;
@@ -911,6 +917,9 @@ namespace TFE_DarkForces
 				{
 					func_1ece78();
 				}*/
+
+				//Fluffy (DukeVoice)
+				playSoundDukeVoiceClip(s_duke_noAmmo[random(DUKE_NOAMMO_COUNT)], 0, 0);
 			}
 		}
 		else  // Primary Fire.
@@ -1082,6 +1091,9 @@ namespace TFE_DarkForces
 				{
 					func_1ece78();
 				}*/
+
+				//Fluffy (DukeVoice)
+				playSoundDukeVoiceClip(s_duke_noAmmo[random(DUKE_NOAMMO_COUNT)], 0, 0);
 			}
 		}
 
@@ -1231,6 +1243,9 @@ namespace TFE_DarkForces
 				{
 					func_1ece78();
 				}*/
+
+				//Fluffy (DukeVoice)
+				playSoundDukeVoiceClip(s_duke_noAmmo[random(DUKE_NOAMMO_COUNT)], 0, 0);
 			}
 		}
 		else  // Primary Fire.
@@ -1401,6 +1416,9 @@ namespace TFE_DarkForces
 				{
 					func_1ece78();
 				}*/
+
+				//Fluffy (DukeVoice)
+				playSoundDukeVoiceClip(s_duke_noAmmo[random(DUKE_NOAMMO_COUNT)], 0, 0);
 			}
 		}
 
@@ -1585,6 +1603,9 @@ namespace TFE_DarkForces
 			// {
 				// func_1ece78();
 			// }
+
+			//Fluffy (DukeVoice)
+			playSoundDukeVoiceClip(s_duke_noAmmo[random(DUKE_NOAMMO_COUNT)], 0, 0);
 		}
 
 		task_end;
@@ -1818,6 +1839,9 @@ namespace TFE_DarkForces
 			// {
 				// func_1ece78();
 			// }
+
+			//Fluffy (DukeVoice)
+			playSoundDukeVoiceClip(s_duke_noAmmo[random(DUKE_NOAMMO_COUNT)], 0, 0);
 		}
 
 		task_end;
@@ -1973,6 +1997,9 @@ namespace TFE_DarkForces
 				} while (msg != MSG_RUN_TASK);
 
 				s_canFireWeaponSec = 0;
+
+				//Fluffy (DukeVoice)
+				playSoundDukeVoiceClip(s_duke_noAmmo[random(DUKE_NOAMMO_COUNT)], 0, 0);
 			}
 		}
 		else  // Primary Fire.
@@ -2119,6 +2146,9 @@ namespace TFE_DarkForces
 				{
 					func_1ece78();
 				}*/
+
+				//Fluffy (DukeVoice)
+				playSoundDukeVoiceClip(s_duke_noAmmo[random(DUKE_NOAMMO_COUNT)], 0, 0);
 			}
 		}
 

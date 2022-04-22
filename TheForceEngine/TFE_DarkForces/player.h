@@ -125,6 +125,26 @@ namespace TFE_DarkForces
 	extern SoundSourceID s_kyleScreamSoundSource;
 	extern SoundSourceID s_playerShieldHitSoundSource;
 
+	//Fluffy (DukeVoice)
+#define DUKE_KILL_COUNT 103
+#define DUKE_SEE_COUNT 20
+#define DUKE_HURT_COUNT 15
+#define DUKE_ITEMPICKUP_COUNT 10
+#define DUKE_NEWGUN_COUNT 5
+#define DUKE_LOCKEDDOOR_COUNT 13
+#define DUKE_RESPAWN_COUNT 7
+#define DUKE_DIE_COUNT 11
+#define DUKE_NOAMMO_COUNT 10
+	extern SoundSourceID s_duke_kill[DUKE_KILL_COUNT];
+	extern SoundSourceID s_duke_see[DUKE_SEE_COUNT];
+	extern SoundSourceID s_duke_hurt[DUKE_HURT_COUNT];
+	extern SoundSourceID s_duke_itemPickup[DUKE_ITEMPICKUP_COUNT];
+	extern SoundSourceID s_duke_newGun[DUKE_NEWGUN_COUNT];
+	extern SoundSourceID s_duke_lockedDoor[DUKE_LOCKEDDOOR_COUNT];
+	extern SoundSourceID s_duke_respawn[DUKE_RESPAWN_COUNT];
+	extern SoundSourceID s_duke_die[DUKE_DIE_COUNT];
+	extern SoundSourceID s_duke_noAmmo[DUKE_NOAMMO_COUNT];
+
 	void player_init();
 	void player_readInfo(u8* inv, s32* ammo);
 	void player_writeInfo(u8* inv, s32* ammo);

@@ -8,6 +8,7 @@
 #include <TFE_Jedi/Sound/soundSystem.h>
 #include <TFE_Jedi/Task/task.h>
 #include <TFE_Jedi/Sound/soundSystem.h>
+#include <TFE_DarkForces/random.h> //Fluffy (DukeVoice)
 
 using namespace TFE_Jedi;
 
@@ -154,6 +155,9 @@ namespace TFE_DarkForces
 					*pickup->item = JTRUE;
 					hud_sendTextMessage(pickup->msgId[0]);
 					s_playerInfo.selectedWeapon = pickup->index;
+
+					//Fluffy (DukeVoice)
+					playSoundDukeVoiceClip(s_duke_newGun[random(DUKE_NEWGUN_COUNT)], 0, 0);
 				}
 			}
 			else
@@ -191,6 +195,9 @@ namespace TFE_DarkForces
 			{
 				s_wearingCleats = JTRUE;
 			}
+
+			//Fluffy (DukeVoice)
+			playSoundDukeVoiceClip(s_duke_itemPickup[random(DUKE_ITEMPICKUP_COUNT)], 0, 0);
 		}
 		else if (pickup->type == ITYPE_OBJECTIVE)
 		{
@@ -270,6 +277,9 @@ namespace TFE_DarkForces
 			if (pickedUpItem)
 			{
 				hud_sendTextMessage(pickup->msgId[0]);
+
+				//Fluffy (DukeVoice)
+				playSoundDukeVoiceClip(s_duke_itemPickup[random(DUKE_ITEMPICKUP_COUNT)], 0, 0);
 			}
 		}
 		else if (pickup->type == ITYPE_SPECIAL)
@@ -306,6 +316,7 @@ namespace TFE_DarkForces
 		{
 			playSound2D(s_wpnPickupSnd);
 		}
+
 
 		// Initialize effect
 		s_flashEffect = FIXED(15);
