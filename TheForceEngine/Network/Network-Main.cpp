@@ -1,7 +1,6 @@
 #include "slikenet/Include/WindowsIncludes.h" //Include this instead of "windows.h" as explained in Raknet FAQ
 #include "slikenet/Include/peerInterface.h"
 #include "slikenet/Include/MessageIdentifiers.h"
-#include "slikenet/Include/Bitstream.h"
 #include "Network-Main.h"
 #include "Network-Player.h"
 #include "Network-Packets.h"

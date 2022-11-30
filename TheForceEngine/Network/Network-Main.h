@@ -1,5 +1,10 @@
 #pragma once
 
+//These 3 headers are necessary when including our network code, so we make sure they're always included this way
+#include "slikenet/Include/types.h"
+#include "slikenet/Include/PacketPriority.h"
+#include "slikenet/Include/Bitstream.h"
+
 enum
 {
 	NETWORKSTATUS_OFF,

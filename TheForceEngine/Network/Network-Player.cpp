@@ -1,6 +1,4 @@
 #include "slikenet/Include/WindowsIncludes.h" //Include this instead of "windows.h" as explained in Raknet FAQ
-#include "slikenet/Include/types.h"
-#include "slikenet/Include/PacketPriority.h"
 #include "Network-Main.h"
 #include "Network-Player.h"
 #include "Print.h"
